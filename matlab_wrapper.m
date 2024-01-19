@@ -1,5 +1,5 @@
 % matlab_rosen_wrapper.m
-function matlab_rosen_wrapper(params,results)
+function matlab_wrapper(params,results)
 
 
 fid = fopen(params,'r');
