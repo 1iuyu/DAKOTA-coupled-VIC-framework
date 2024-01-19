@@ -1,0 +1,56 @@
+
+
+environment
+  tabular_data
+    tabular_data_file = 'mogatest1.dat'   #s0
+
+method
+  moga                #s0,#s1,#s2,#s4,#s5,#s6,#s7,#s10,#s13,#s15,#s17
+#  soga                                       #s3,#s8,#s9,#s11,#s12,#s14,#s16
+    seed = 10983
+  max_function_evaluations = 2500               #s0,#s4,#s5,#s6,#s7
+
+  initialization_type unique_random
+  crossover_type shuffle_random                 #s0,#s3,#s4,#s5,#s6,#s7,#s8,#s9,#s10,#s11,#s12,#s13,#s14,#s16
+    num_offspring = 2 num_parents = 2		        #s0,#s3,#s4,#s5,#s6,#s7,#s8,#s9,#s10,#s11,#s12,#s13,#s14,#s16
+#  crossover_type				                        #s1,#s2,#s15,#s17
+#    multi_point_parameterized_binary = 2	      #s1,#s2,#s15,#s17
+    crossover_rate = 0.8
+  mutation_type replace_uniform                 #s0,#s1,#s4,#s5,#s6,#s7,#s15
+    mutation_rate = 0.1				                  #s0,#s1,#s4,#s5,#s6,#s7,#s15
+#  mutation_type offset_normal			            #s2,#s3
+#    mutation_scale = 0.1			                  #s2,#s3
+  fitness_type domination_count                 #s0,#s1,#s2,#s4,#s5,#s6,#s7,#s15,#s17
+  replacement_type below_limit = 6              #s0,#s1,#s2,#s4,#s5,#s6,#s7,#s15,#s17
+    shrinkage_fraction = 0.9                    #s0,#s1,#s2,#s4,#s5,#s6,#s7,#s15,#s17
+#  replacement_type favor_feasible              #s3
+  convergence_type metric_tracker               #s0,#s1,#s2,#s4,#s5,#s6,#s7,#s15,#s17
+    percent_change = 0.05 num_generations = 40  #s0
+#    percent_change = 0.05 num_generations = 10 #s1,#s2,#s4,#s5,#s6,#s7,#s15,#s17
+#  niching_type radial 0.02 0.05		             #s5
+#  niching_type distance 0.02 0.05		          #s6
+#  niching_type max_designs 0.02 0.05	  	      #s7
+#    num_designs = 6	      			              #s7
+  final_solutions = 1
+  output silent 
+
+   
+variables
+
+  continuous_design = 5
+  cdv_initial_point    0.21569    0.00327      0.34624      1.41418      1.27188
+  cdv_lower_bounds    0.0     0.0      0.0      0.0      0.0  
+  cdv_upper_bounds     0.4      1.0      1.0      2.0      2.0  
+  cdv_descriptor       'b'     'ds'      'ws'      't2'      't3'
+
+interface
+  fork
+  parameters_file = 'params.in'   
+  results_file    = 'results.out'   
+  analysis_driver = 'simulator.bat' 
+  file_tag
+  file_save
+responses
+  objective_functions = 1
+  no_gradients
+  no_hessians
