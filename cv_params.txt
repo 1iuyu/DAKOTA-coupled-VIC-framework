@@ -1,0 +1,6 @@
+# Input files -----------------------------------------------
+global_param_file	path\to\global_param.txt
+soil_param	path\to\soil_param.txt
+vic_out_dir     path\to\vic_out_
+n_proc	10
+
