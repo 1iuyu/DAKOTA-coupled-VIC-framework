@@ -5,15 +5,18 @@
 Software architecture of the coupled VIC-DAKOTA capability, for parameter calibration and model optimization, including the Routing of streamflow model.
 
 ## Files
-`dakota_mogatest.in`:dakota's input file.<br />
-`matlab_wrapper.m`:The file used to pass parameters between the VIC model and DAKOTA. Data pre-processing and Data post-processing in the figure.<br />
-`set_up_parallel.m`:Create global_param.txt and soil_param.txt files for parallel computation of VIC-5 classic or VIC-4.2.d (prior versions)  input files.<br />
-`cv_params.txt`:The address needed to run the `set_up_parallel.m`.<br />
-`myKGE.m`,`myNSE.m`,`myRMSE.m`:metrics files<br />
-`shell_script.sh`:runs VIC model in parallel.<br />
-`simulator.bat`,`strsplit_spec.m`,`write_soils.m`:Other Files<br />
+`dakota_mogatest.in` : dakota's input file <br />
+`matlab_wrapper.m` : The file used to pass parameters between the VIC model and DAKOTA. Data pre-processing and Data post-processing in the figure <br />
+`set_up_parallel.m` : Create global_param.txt and soil_param.txt files for parallel computation of VIC-5 classic or VIC-4.2.d (prior versions) input files <br />
+`cv_params.txt` : The address needed to run the `set_up_parallel.m` <br />
+`myKGE.m`  `myNSE.m`  `myRMSE.m` : metrics files <br />
+`shell_script.sh`  :runs VIC model in parallel <br />
+`simulator.bat`  `strsplit_spec.m`  `write_soils.m` : Other Files <br />
 
+## Usage and required modification of files
 
+After downloading the file, run `CMD` in the folder and type `dakota -i dakota_mogatest.in` on the command line <br>
+`dakota_mogatest.in` `matlab_wrapper.m` `shell_script.sh` needs to be modified.
 
 References
 ----------
