@@ -16,7 +16,7 @@ Software architecture of the coupled VIC-DAKOTA capability, for parameter calibr
 ## Usage and required modification of files
 
 After downloading the file, run `CMD` in the folder and type `dakota -i dakota_mogatest.in` on the command line <br>
-`dakota_mogatest.in` `matlab_wrapper.m` `shell_script.sh` needs to be modified.
+`dakota_mogatest.in` `matlab_wrapper.m` `shell_script.sh` need to be modified.
 
 References
 ----------
