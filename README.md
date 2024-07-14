@@ -4,9 +4,14 @@
 </div>
 Software architecture of the coupled VIC-DAKOTA capability, for parameter calibration and model optimization, including the Routing of streamflow model.
 
-# Files
-`dakota.m`:
-
+## Files
+`dakota_mogatest.in`:dakota's input file.
+`matlab_wrapper.m`:The file used to pass parameters between the VIC model and DAKOTA. Data pre-processing and Data post-processing in the figure.
+`set_up_parallel.m`:Create global_param.txt and soil_param.txt files for parallel computation of VIC-5 classic or VIC-4.2.d (prior versions)  input files.
+`cv_params.txt`:The address needed to run the `set_up_parallel.m`.
+`myKGE.m`,`myNSE.m`,`myRMSE.m`:metrics files
+`shell_script.sh`:runs VIC model in parallel.
+`simulator.bat`,`strsplit_spec.m`,`write_soils.m`:Other Files
 
 
 
