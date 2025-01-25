@@ -1,0 +1,33 @@
+# Dakota Input File: rosen_uq_pce.in
+
+environment
+
+method
+  polynomial_chaos
+    quadrature_order = 3
+    samples_on_emulator = 10000
+    seed = 12347
+    response_levels = .1 1. 50. 100. 500. 1000.
+    variance_based_decomp #interaction_order = 1
+
+variables
+  uniform_uncertain = 5
+    lower_bounds      = 0.0    0.0    0.0    0.15    0.5
+    upper_bounds      = 0.4    1.0    1.0    1.35    2.5
+    descriptors       = 'b'    'ds'   'ws'   't2'   't3'
+    #lower_bounds      = 0.0    0.0    0.5
+    #upper_bounds      = 0.4    1.0    2.5
+    #descriptors       = 'b'    'ds'   't3'
+
+interface
+  fork
+  parameters_file = 'params.in'   
+  results_file    = 'results.out'   
+  analysis_driver = 'simulator.bat' 
+  file_tag
+  file_save
+
+responses
+  response_functions = 1
+  no_gradients
+  no_hessians
