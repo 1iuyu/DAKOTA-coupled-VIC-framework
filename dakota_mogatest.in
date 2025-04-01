@@ -51,6 +51,6 @@ interface
   file_tag
   file_save
 responses
-  objective_functions = 1
+  objective_functions = 1  # 与目标函数的个数对应
   no_gradients
   no_hessians
