@@ -1,6 +1,6 @@
 clc
 clear;
-parameter_file = "path\to\cv_params.txt";
+parameter_file = "path\to\cv_params.txt"; % 设置文件的地址
 
 B = read_parfile(parameter_file);
 
