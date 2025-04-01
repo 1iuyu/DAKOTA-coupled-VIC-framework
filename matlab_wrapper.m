@@ -7,7 +7,7 @@ C = textscan(fid,'%n%s');
 fclose(fid);
 
 % set design variables -- could use vector notation
-spf = "path\to\soil parameter file"; % 修改土壤文件地址
+spf = "path\to\vic_out_"; % 修改为存放土壤文件的文件夹
 files = dir(fullfile(spf, 'soil*.txt'));
 for i = 1:length(files)
     soils_name = fullfile(spf, files(i).name);
